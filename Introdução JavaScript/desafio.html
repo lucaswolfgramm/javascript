@@ -54,7 +54,7 @@
                     console.log('Jedi Master');
                 }
             }
-            var anosEstudo = a;
+            var anosEstudo = 6;
             experiencia(anosEstudo);
 
             // De 0-1 ano: Iniciante
@@ -74,6 +74,22 @@
                 }
             ];
 
+            function habilidadesUsuarios() {
+                for (i = 0; i < usuarios.length; i++){
+                    var skills = '';
+                    var qtdSkills = usuarios[i].habilidades.length - 1;
+                    
+                    for (var value of usuarios[i].habilidades) {
+                        if (value == usuarios[i].habilidades[qtdSkills]){
+                            skills += value + '.';
+                        } else {
+                            skills += value + ', ';
+                        }
+                    }
+                    console.log('O ' + usuarios[i].nome + ' possui as habilidades: ' + skills);
+                }
+            }
+            habilidadesUsuarios();
         </script>
     </body>
 </html>
