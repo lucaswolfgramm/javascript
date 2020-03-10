@@ -1,0 +1,79 @@
+<html> 
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <script>
+            //Exec 1
+            var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+            };
+
+            function retornaEndereco( ){
+                console.log('O usuário mora em ' + endereco.cidade + ' / ' + endereco.uf + ', no bairro ' + endereco.bairro + ', na rua "' + endereco.rua + '" com nº ' + endereco.numero)
+            }
+
+            retornaEndereco();
+
+            //Exec 2
+            function pares(x, y) {
+                for (var i = x; i <= y; i++){
+                    if (i%2 == 0){
+                        console.log(i + ' é par');
+                    }
+                }
+            }
+            pares(32, 321);
+
+            //Exec 3
+            function temHabilidade(skills, habilidade) {
+                console.log(skills.indexOf("Javascript") != -1);
+
+                /*for (var i = 0; i <= 3; i++) {
+                    if (skills[i] == "Javascript"){
+                        console.log(skills[i] == "Javascript");
+                    }
+                }*/
+            }
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            temHabilidade(skills, "Javascript"); // true ou false
+
+            //Exec 4
+            function experiencia(anos) {
+                if (anos <= 1) {
+                    console.log('Iniciante');
+                } else if ( anos <= 3) {
+                    console.log('Intermediário');
+                } else if ( anos <= 6) {
+                    console.log('Avançado');
+                } else if ( anos >= 7) {
+                    console.log('Jedi Master');
+                }
+            }
+            var anosEstudo = a;
+            experiencia(anosEstudo);
+
+            // De 0-1 ano: Iniciante
+            // De 1-3 anos: Intermediário
+            // De 3-6 anos: Avançado
+            // De 7 acima: Jedi Master
+
+            //Exec 5
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+        </script>
+    </body>
+</html>
