@@ -1,0 +1,35 @@
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+        <a href="https://skylab.rocketseat.com.br/api/files/1566499161406.pdf">PDF Desafio</a><br>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="nome" disabled='disabled' />
+            <button class="botao">Editar</button><br>
+
+            <!--div class="box"></div-->
+        </div>
+        <script>
+            var inputElement = document.querySelector('input[name=nome]')
+            var btnElement = document.querySelector('button.botao');
+            btnElement.onclick = function() {
+                var div = document.querySelector('#app');
+                var inputElement = document.querySelector('#nome');
+                var attributeDisabled = document.querySelector('input[disabled=disabled]');
+                if (inputElement.contains(attributeDisabled)) {
+                    inputElement.removeAttribute('disabled');
+                } else {
+                    inputElement.setAttribute('disabled', 'disabled');
+                }
+
+                var boxElement = document.createElement('div');
+                //boxElement.setAttribute('class', 'box');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+            }
+        </script>
+    </body>
+</html> 

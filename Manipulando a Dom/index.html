@@ -6,12 +6,43 @@
     <body>
         <div id="app">
             <button onmouseover="mostraAlerta()">Me pressione</button>
-            <input onkeypress="mostraAlerta()"/>
+            <input onkeypress="mostraAlerta()"/><br><br>
+
+            <input type="text" name="nome" id="nome" />
+            <button class="botao">Adicionar</button><br>
+
+            <div class="box"></div>
         </div>
         <script>
             function mostraAlerta(){
                 alert('Botão foi clicado');
             }
+
+            var inputElement = document.querySelector('input[name=nome]')
+            var btnElement = document.querySelector('button.botao');
+            btnElement.onclick = function() {
+                var div = document.querySelector('#app');
+                var inputElement = document.querySelector('#nome');
+                var text = inputElement.value;
+                var botao = document.querySelector('button.botao');
+                alert('Botão clicado: ' + text);
+                div.removeChild(inputElement);
+                botao.setAttribute('disabled', 'disabled');
+            }
+
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'http://rocketseat.com.br');
+            linkElement.setAttribute('title', 'Site da Rocketseat');
+            var textElement = document.createTextNode('Acessar site da RockertSeat');
+            linkElement.appendChild(textElement);
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            var boxElement = document.querySelector('.box');
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
+
         </script>
     </body>
 </html> 
